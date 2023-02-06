@@ -34,7 +34,7 @@
 
 # 📖 Space Travelers <a name="about-project"></a>
 
-**Space Travelers' Hub** is a single-page web application that uses the SpaceX API and allows users to reserve rockets or dragons, join missions, and keep track of it from profile page.
+**Space Travelers' Hub** is a single-page application that uses the SpaceX API. It allows users to reserve rockets and dragons, join new missions, and keep track of status from dashboard. Built with React and Redux.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,6 +51,11 @@
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
+
+- Latest updates on SpaceX rockets, missions, and dragons
+- Create and manage reservations for rockets and dragons
+- Join missions and keep track of status
+- Responsive and user-friendly interface
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,25 +77,70 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+- Node.js installed on your local machine
+- npm or yarn package manager
+
 ### Setup
 
 Clone this repository to your desired folder:
+
+```sh
+  git clone git@github.com:rashedarman/bookstore.git
+
+  cd bookstore
+```
 
 ### Install
 
 Install this project with:
 
+```sh
+  yarn install
+```
+
+or with npm:
+
+```sh
+  npm install
+```
+
 ### Usage
 
 To run the project, execute the following command:
+
+```sh
+  yarn start
+```
+
+or with npm:
+
+```sh
+  npm start
+```
+
+This should start the development server and open the application in your default web browser.
 
 ### Run tests
 
 To run tests, run the following command:
 
+```sh
+  yarn test
+```
+
+or with npm:
+
+```sh
+  npm test
+```
+
 ### Deployment
 
 You can deploy this project using:
+
+- Vercel
+- Netlify
+- Railway
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +152,13 @@ You can deploy this project using:
 
 - GitHub: [@rashedarman](https://github.com/rashedarman)
 - Twitter: [@rashedarman21](https://twitter.com/rashedarman21)
-- LinkedIn: [Rashed Arman](https://linkedin.com/in/rashedarman)
+- LinkedIn: [@rashedarman](https://linkedin.com/in/rashedarman)
+
+👤 **Ivan Martinez von Halle**
+
+- GitHub: [@ivanmvh](https://github.com/rashedarman)
+- Twitter: [@imprivado](https://twitter.com/rashedarman21)
+- LinkedIn: [@ivan-martinez-von-halle](https://www.linkedin.com/in/ivan-martinez-von-halle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
