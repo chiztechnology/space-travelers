@@ -1,9 +1,17 @@
-import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { rocketReserved } from '../redux/rockets/rocketSlice';
 import RocketType from '../types/rockets';
 
 const RocketItem = ({ rocket }) => {
-  const { name, flickrImage, description } = rocket;
+  const {
+    id, name, flickrImage, description, reserved,
+  } = rocket;
+
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(rocketReserved(id));
+  };
 
   return (
     <li
@@ -20,8 +28,12 @@ const RocketItem = ({ rocket }) => {
       >
         <h5>{name}</h5>
         <p>{description}</p>
-        <Button variant="primary" style={{ borderRadius: '.25rem' }}>
-          Reserve Rocket
+        <Button
+          onClick={handleClick}
+          variant="primary"
+          style={{ borderRadius: '.25rem' }}
+        >
+          {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
         </Button>
       </div>
     </li>
@@ -29,7 +41,7 @@ const RocketItem = ({ rocket }) => {
 };
 
 RocketItem.propTypes = {
-  rocket: PropTypes.objectOf(RocketType).isRequired,
+  rocket: RocketType.isRequired,
 };
 
 export default RocketItem;
