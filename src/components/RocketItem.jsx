@@ -1,4 +1,4 @@
-import { Button } from 'react-bootstrap';
+import { Badge, Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { rocketReserved } from '../redux/rockets/rocketSlice';
 import RocketType from '../types/rockets';
@@ -27,10 +27,17 @@ const RocketItem = ({ rocket }) => {
         }}
       >
         <h5>{name}</h5>
-        <p>{description}</p>
+        <p>
+          {reserved && (
+            <Badge style={{ marginRight: '.75rem' }} bg="info">
+              Reserved
+            </Badge>
+          )}
+          {description}
+        </p>
         <Button
           onClick={handleClick}
-          variant="primary"
+          variant={reserved ? 'outline-secondary' : 'primary'}
           style={{ borderRadius: '.25rem' }}
         >
           {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
