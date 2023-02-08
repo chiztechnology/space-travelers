@@ -13,7 +13,7 @@ function RocketsPage() {
 
   const { rockets } = useSelector((state) => state.rockets);
   return (
-    <Container>
+    <Container fluid="xl">
       <ul>
         {rockets.map(({ id, ...rocket }) => (
           <RocketItem key={id} rocket={rocket} />

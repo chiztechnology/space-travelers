@@ -1,17 +1,29 @@
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap';
 import RocketType from '../types/rockets';
 
 const RocketItem = ({ rocket }) => {
   const { name, flickrImage, description } = rocket;
 
   return (
-    <li>
-      <img src={flickrImage} alt={name} width="250" height="250" />
-      <div>
-        <h2>{name}</h2>
+    <li
+      style={{
+        display: 'flex',
+        padding: '1rem',
+      }}
+    >
+      <img src={flickrImage} alt={name} width="250" height="200" />
+      <div
+        style={{
+          marginLeft: '1rem',
+        }}
+      >
+        <h5>{name}</h5>
         <p>{description}</p>
+        <Button variant="primary" style={{ borderRadius: '.25rem' }}>
+          Reserve Rocket
+        </Button>
       </div>
-      <button type="button">Reserve</button>
     </li>
   );
 };
