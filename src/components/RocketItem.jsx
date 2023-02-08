@@ -14,22 +14,13 @@ const RocketItem = ({ rocket }) => {
   };
 
   return (
-    <li
-      style={{
-        display: 'flex',
-        padding: '1rem',
-      }}
-    >
+    <li className="d-flex py-3">
       <img src={flickrImage} alt={name} width="250" height="200" />
-      <div
-        style={{
-          marginLeft: '1rem',
-        }}
-      >
+      <div className="ms-3">
         <h5>{name}</h5>
         <p>
           {reserved && (
-            <Badge style={{ marginRight: '.75rem' }} bg="info">
+            <Badge className="me-2" bg="info">
               Reserved
             </Badge>
           )}
