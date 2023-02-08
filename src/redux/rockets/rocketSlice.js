@@ -13,7 +13,8 @@ export const getRockets = createAsyncThunk(FETCH, async () => {
     id: rocket.id,
     name: rocket.rocket_name,
     type: rocket.rocket_type,
-    flickrImages: rocket.flickr_images,
+    flickrImage: rocket.flickr_images[0],
+    description: rocket.description,
   }));
 });
 
