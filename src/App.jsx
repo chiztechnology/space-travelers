@@ -5,12 +5,14 @@ import Navbar from './components/Navbar';
 import MissionsPage from './pages/Missions';
 import ProfilePage from './pages/Profile';
 import RocketsPage from './pages/Rockets';
+import { getMissions } from './redux/missions/missionsSlice';
 import { getRockets } from './redux/rockets/rocketSlice';
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getRockets());
+    dispatch(getMissions());
   }, [dispatch]);
 
   return (
