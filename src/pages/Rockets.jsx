@@ -1,21 +1,13 @@
 import { nanoid } from '@reduxjs/toolkit';
-import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import RocketItem from '../components/RocketItem';
-import { getRockets } from '../redux/rockets/rocketSlice';
 
 function RocketsPage() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getRockets());
-  }, [dispatch]);
-
   const { rockets } = useSelector((state) => state.rockets);
 
   return (
-    <Container fluid="xl">
+    <Container fluid="xl" className="mt-3">
       <ul>
         {rockets.map((rocket) => (
           <RocketItem key={nanoid()} rocket={rocket} />
