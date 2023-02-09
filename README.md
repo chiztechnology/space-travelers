@@ -158,7 +158,7 @@ You can deploy this project using:
 
 - GitHub: [chiztechnology](https://github.com/chiztechnology)
 - Twitter: [IsraelChizungu](https://twitter.com/IsraelChizungu)
-- LinkedIn: [IsraelChizungu](https://www.linkedin.com/in/israel-chizungu-b70316125/)
+- LinkedIn: [IsraelChizungu](https://www.linkedin.com/in/israelchizungu/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
