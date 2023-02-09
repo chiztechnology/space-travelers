@@ -16,23 +16,23 @@ export const getMissions = createAsyncThunk(FETCH, async () => {
   }));
 });
 
-export const reserveMission = (state, action) => {
-  const missions = state.missions.map((mission) => {
-    if (mission.id === action.payload) {
-      return {
-        // set the reverse value
-        ...mission, reserved: !mission.reserved,
-      };
-    }
-    return mission;
-  });
-  return { ...state, missions };
-};
-
 const missionsSlice = createSlice({
   name: 'missions',
   initialState,
-  reducers: reserveMission,
+  reducers: {
+    reserveMission(state, action) {
+      const missions = state.missions.map((mission) => {
+        if (mission.id === action.payload) {
+          return {
+            // set the reverse value
+            ...mission, reserved: !mission.reserved,
+          };
+        }
+        return mission;
+      });
+      return { ...state, missions };
+    },
+  },
   extraReducers: {
     [getMissions.fulfilled]: (state, action) => {
       const currState = state;
@@ -41,4 +41,5 @@ const missionsSlice = createSlice({
   },
 });
 
+export const { reserveMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
