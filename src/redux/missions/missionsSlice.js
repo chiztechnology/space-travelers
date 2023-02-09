@@ -9,6 +9,7 @@ const initialState = {
 
 export const getMissions = createAsyncThunk(FETCH, async () => {
   const missions = await api.get('/missions');
+  console.log(missions);
   return missions.data.map((mission) => ({
     id: mission.mission_id,
     name: mission.mission_name,

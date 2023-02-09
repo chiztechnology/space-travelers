@@ -1,17 +1,11 @@
-import { useEffect } from 'react';
 import {
   Badge, Button, Container, Table,
 } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions, reserveMission } from '../redux/missions/missionsSlice';
+import { reserveMission } from '../redux/missions/missionsSlice';
 
 function MissionsPage() {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
-
   const { missions } = useSelector((state) => state.missions);
 
   const handleClick = (id) => {
