@@ -154,18 +154,14 @@ You can deploy this project using:
 - Twitter: [@rashedarman21](https://twitter.com/rashedarman21)
 - LinkedIn: [@rashedarman](https://linkedin.com/in/rashedarman)
 
-👤 **Ivan Martinez von Halle**
-
-- GitHub: [@ivanmvh](https://github.com/rashedarman)
-- Twitter: [@imprivado](https://twitter.com/rashedarman21)
-- LinkedIn: [@ivan-martinez-von-halle](https://www.linkedin.com/in/ivan-martinez-von-halle)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- [ ] Improve page styling
+- [ ] Persist in localstorage
 - [ ] Reserve Dragons
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
